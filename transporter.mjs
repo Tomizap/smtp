@@ -161,8 +161,8 @@ const multiSend = async (collection, emailConfig) => {
             { lastEmailAt: { $exists: false } },
             { lastEmailAt: { $lt: new Date(new Date().setDate(new Date().getDate() - 7)) } }
         ]
-    }, '_id name', { limit: 99 });
-    // console.log("contacts", contacts);
+    }, '_id name', { limit: 99999 });
+    console.log(contacts.length, "contacts");
 
     for (let contact of contacts) {
         const index = contacts.indexOf(contact);
@@ -174,7 +174,7 @@ const multiSend = async (collection, emailConfig) => {
             const now = new Date();
             const dayOfWeek = now.getDay();
             const hour = now.getHours();
-            console.log("dayOfWeek", dayOfWeek, "hour", hour);
+            // console.log("dayOfWeek", dayOfWeek, "hour", hour);
             if (dayOfWeek === 0 || dayOfWeek === 6 || hour < 9 || hour >= 20) {
                 console.log("Hors plage horaire, attente 1 heur ...".red);
                 await new Promise(resolve => setTimeout(resolve, 3600000));
