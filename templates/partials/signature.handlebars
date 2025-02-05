@@ -1,0 +1,179 @@
+{{#if cb_open_url}}
+<img src="{{cb_open_url.links.api}}" width="0" height="0">
+{{/if}}
+<table cellspacing="0"
+    style="font-family: Arial; background: transparent; font-size: 13px; color: rgb(0, 0, 0); line-height: 1.2; display: inline-table;"
+    data-width-toget="457" data-height-toget="390" data-logo-width="80" data-logo-height="80">
+    <tbody>
+        <tr style="color: inherit;">
+            <td style="color: inherit; background-color: rgb(255, 255, 255); text-align: left; white-space: normal; border-width: initial; border-style: initial; border-color: rgb(255, 255, 255);"
+                rowspan="1" colspan="1" data-reply="3" ddirection="3">
+                <table
+                    style="width: 100%; border-collapse: separate; font-family: Arial; background: transparent; font-size: 13px; color: rgb(0, 0, 0); line-height: 1.2;"
+                    cellspacing="0">
+                    <tbody>
+                        <tr style="height: auto; color: inherit;">
+                            <td style="color: inherit; text-align: left; padding-top: 0px; padding-bottom: 0px; white-space: normal; border-width: initial; border-style: initial; border-color: rgb(255, 255, 255);"
+                                rowspan="1" colspan="1" data-reply="3" ddirection="3">
+                                <table
+                                    style="width: 100%; height: 100%; border-collapse: separate; font-family: Arial; background: transparent; font-size: 13px; color: rgb(0, 0, 0); line-height: 1.2;"
+                                    cellspacing="0">
+                                    <tbody>
+                                        <tr style="color: inherit;">
+                                            {{#if user.links.picture}}
+                                            <td style="color: inherit; text-align: left; height: 93px; width: 100px; white-space: normal; border-width: initial; border-style: initial; border-color: rgb(255, 255, 255);"
+                                                rowspan="1" colspan="1" height="93px" width="100px" data-reply="3"
+                                                ddirection="3"><img width="80" data-forme="50" data-link="" height="80"
+                                                    style="width:80px;height:80px;-webkit-border-radius:50%;-moz-border-radius:50%; border-radius: 50%; border: solid 2px {{ux.primary}};"
+                                                    src="{{user.links.picture}}"
+                                                    data-absolute="https://img.signitic.app/uploads/"
+                                                    alt="{{ user.name }}">
+                                            </td>
+                                            {{/if}}
+                                            <td style="color: inherit; width: 329px; height: 93px; text-align: left; padding: 0px 0px 0px 20px; background-color: rgb(255, 255, 255); white-space: normal; border-left: 2px solid {{ux.primary}}; border-top: 0px none rgb(255, 255, 255); border-bottom: 0px none rgb(255, 255, 255);"
+                                                rowspan="1" colspan="1" width="329px" height="93px" data-reply="3"
+                                                ddirection="3">
+                                                <div style="white-space: normal;">
+                                                    <p style="white-space: normal; margin: 0px;">
+                                                        <span style="color: {{ux.primary}};">
+                                                            <strong>
+                                                                <span style="font-size: 22px; font-weight:bold"> {{
+                                                                    user.name }}
+                                                                    <br>
+                                                                </span>
+                                                            </strong>
+                                                        </span>
+                                                        <span style="color: #000000;">
+                                                            <strong>{{user.title}}</strong>, {{company.name}} <br>
+                                                        </span>
+                                                        <br>
+                                                    <div style="margin-bottom: 10px;">
+                                                        <span style="color: #95a5a6;" class="cta light">
+                                                            📧 {{ user.email }}
+                                                        </span>
+                                                    </div>
+                                                    <span style="color: #95a5a6;">
+                                                        <a href="tel:{{ user.phone }}" target="_blank" class="cta light"
+                                                            rel="noopener noreferrer">📞 {{
+                                                            user.phone }}</a>
+                                                    </span>
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{#if company.title}}
+<div><i> {{company.title}} </i></div>
+{{/if}}
+
+{{#if user.links}}
+<div style="display:flex; gap: 0.5rem; margin-top: 15px; align-items: center">
+    {{#if company.links }}
+    {{#if company.links.logo }}
+    {{#if company.links.website}}
+    <div style="display: flex;">
+        <a href="{{company.links.website}}" class="button-icon">
+            <img src="{{company.links.logo}}" width="30px" alt="whatsapp">
+        </a>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+    {{!-- agenda --}}
+    <div style="display: flex; align-items: center;">
+        {{#if user.links.agenda}}
+        <a href="{{{user.links.agenda}}}" class="cta" style="
+    border: none;
+    border-radius: 5px;
+    padding: 11px 11px 11px 13px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    max-height: fit-content;
+    margin-top: 0.6rem;">
+            Prendre rendez-vous
+        </a>
+        {{else}}
+        {{#if company.links.agenda}}
+        <div style="display: flex; align-items: center;">
+            <a href="{{{company.links.agenda}}}" class="cta" style="
+    border: none;
+    border-radius: 5px;
+    padding: 11px 11px 11px 13px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    max-height: fit-content;
+    margin-top: 0.6rem;">
+                Prendre rendez-vous
+            </a>
+        </div>
+        {{/if}}
+        {{/if}}
+    </div>
+    {{!-- whatsapp --}}
+    <div style="display: flex;">
+        {{#if user.phone}}
+        <a href="https://wa.me/+33{{user.phone}}" class="button-icon">
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+                width="30px" alt="whatsapp">
+        </a>
+        {{else}}
+        <div style="display: flex;">
+            {{#if company.phone}}
+            <a href="https://wa.me/+33{{company.phone}}" class="button-icon">
+                <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+                    width="30px" alt="whatsapp">
+            </a>
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+    {{!-- linkedin --}}
+    <div style="display: flex;">
+        {{#if user.links.linkedin}}
+        <a href="{{user.links.linkedin}}" class="button-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="30px"
+                alt="linkedin">
+        </a>
+        {{else}}
+        <div style="display: flex;">
+            {{#if company.links.linkedin}}
+            <a href="{{company.links.linkedin}}" class="button-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="30px"
+                    alt="linkedin">
+            </a>
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+    {{!-- instagram --}}
+    <div style="display: flex;">
+        {{#if user.links.instagram}}
+        <a href="{{user.links.instagram}}" class="button-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
+                width="30px" alt="instagram">
+        </a>
+        {{else}}
+        <div style="display: flex;">
+            {{#if company.links.instagram}}
+            <a href="{{company.links.instagram}}" class="button-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
+                    width="30px" alt="instagram">
+            </a>
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/if}}

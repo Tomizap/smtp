@@ -1,0 +1,30 @@
+{{#if cb_open_url}}
+<img src="{{cb_open_url.links.api}}" width="0" height="0">
+{{/if}}
+<div style="text-align: center; padding: 20px 0; font-size: 14px; text-decoration: none">
+    {{#if company.links}}
+    {{#if _id}}{{#if company.links.api}}
+    <img src='{{company.links.api}}/tracking/mail/{{_id}}/open' width='1' height='1'>
+    {{/if}}{{/if}}
+    <div style="padding-bottom: 15px"><a href="{{company.links.website}}"><b>&copy; {{company.name}}</b></a></div>
+    <div style="padding-bottom: 15px">
+        {{#if company.links.website}}
+        <a style="text-decoration: none; color:{{ux.primary}}" href="{{company.links.website}}">Accueil</a>
+        {{/if}}
+        {{#if company.links.contact}}
+        <a style="text-decoration: none; color:{{ux.primary}}; margin: 0 10px"
+            href="{{company.links.contact}}">Contact</a>
+        {{/if}}
+        {{#if company.links.policy}}
+        <a style="text-decoration: none; color:{{ux.primary}}" href="{{company.links.policy}}">Confidentialité</a>
+        {{/if}}
+    </div>
+    {{#if company.links.unsuscribe}}
+    <div>
+        <a href="{{company.links.unsuscribe}}">
+            unsuscribe
+        </a>
+    </div>
+    {{/if}}
+    {{/if}}
+</div>

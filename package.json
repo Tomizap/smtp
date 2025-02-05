@@ -1,0 +1,28 @@
+{
+  "name": "@tomizap/smtp",
+  "version": "1.0.10",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "dev": "node app.mjs",
+    "start": "node server.js",
+    "template": "node template.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tomizap/mongoose-model": "^1.1.59",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "handlebars": "^4.7.8",
+    "mongoose": "^8.6.2",
+    "nodemailer": "^6.9.15",
+    "nodemailer-express-handlebars": "^6.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "eslint-config-google": "^0.14.0"
+  },
+  "description": ""
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Principal</title>
+    <style>
+        .button-icon {
+            border-radius: 25%;
+            padding: 0.5rem;
+            margin: 6px 6px 0 0
+        }
+
+        .button-icon:hover {
+            background-color: rgb(244, 244, 244);
+            background: rgb(244, 244, 244);
+            border-radius: 25%;
+        }
+
+        .content .cta {
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: black;
+            background-color: black;
+        }
+
+        .content .shadow .cta {
+            margin: 1rem 0;
+        }
+
+        .cta.light {
+            background: transparent;
+            background-color: transparent;
+            color: black;
+        }
+
+        .cta:hover {
+            background: #3f3f3f;
+            background-color: #3f3f3f;
+        }
+
+        .cta.light:hover {
+            background-color: rgb(244, 244, 244);
+            background: rgb(244, 244, 244);
+        }
+
+        .shadow {
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(244, 244, 244, 1));
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="shadow">
+            {{{html}}}
+        </div>
+        {{#if user}}
+        <div style=" padding-top: 30px;">
+            {{> signature}}
+        </div>
+        {{/if}}
+    </div>
+</body>
+
+</html>
